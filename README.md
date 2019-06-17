@@ -15,9 +15,9 @@
 
 
 1. 首先，在代码生成引擎里面新增支持生成controllerTemplate、serviceTemplate、serviceImplTemplate、mapperTemplate
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190617202424132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70)
+<img src="https://img-blog.csdnimg.cn/20190617202424132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70"/>
 2.  编写相关的模板
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190617203029279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70)
+<img src="https://img-blog.csdnimg.cn/20190617203029279.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70"/>
 3. 代码生成器的使用
 在com.xinlin.code.Demo中的main有使用demo
 
@@ -53,9 +53,9 @@
 <h3>具体使用流程</h3>
 1. 我先设计好表（比如我现在有几个权限相关的基础表）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/201906172051232.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70)
+<img src="https://img-blog.csdnimg.cn/201906172051232.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70"/>
 2. 修改com.xinlin.code.Demo的相关配置，执行main方法
    可以看到快速生成了相关的代码文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190617205602715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190617210254691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70)
+<img src="https://img-blog.csdnimg.cn/20190617205602715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70"/>
+<img src="https://img-blog.csdnimg.cn/20190617210254691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIxMTg3NTE1,size_16,color_FFFFFF,t_70"/>
 3.把相关的代码复制到我们demo项目的相关目录下即可
