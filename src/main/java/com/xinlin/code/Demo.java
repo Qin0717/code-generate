@@ -14,7 +14,7 @@ public class Demo {
         GlobalConfig globalConfig = new GlobalConfig();//全局配置
 //        globalConfig.setTemplatepath("/template/style1");//自定义模板路径
         globalConfig.setAuthor("新林");
-        globalConfig.setEntityPackage("com.xinhuo.demo.model");//实体包名
+        globalConfig.setEntityPackage("com.xinhuo.demo.entity");//实体包名
         globalConfig.setMapperPackage("com.xinhuo.demo.dao");//dao包名
         globalConfig.setServicePackage("com.xinhuo.demo.service");//service包名
         globalConfig.setServiceImplPackage("com.xinhuo.demo.service.impl");

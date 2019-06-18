@@ -42,7 +42,7 @@ public class ${entity}Service extends BaseService<${entity}Mapper,${entity}> {
                         "save-${entity?uncap_first}-null","修改的数据不存在");
             }
             //将${entity?uncap_first}不为空的copy到pre${entity},更新${entity?uncap_first}
-            BeanUtils.copyProperties(${entity?uncap_first},pre${entity});
+            BeanUtils.copyProperties(${entity?uncap_first},pre${entity},"${tbKey}");
             boolean result = this.updateById(pre${entity});//更新
             return result;
         }else{

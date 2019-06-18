@@ -12,7 +12,7 @@ public enum DbColumnType {
     BASE_DOUBLE("double", (String)null),
     STRING("String", (String)null),
     LONG("Long", (String)null),
-    INTEGER("int", (String)null),
+    INTEGER("Integer", (String)null),
     FLOAT("Float", (String)null),
     DOUBLE("Double", (String)null),
     BOOLEAN("Boolean", (String)null),

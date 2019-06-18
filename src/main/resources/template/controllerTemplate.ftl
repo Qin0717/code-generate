@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.BeanUtils;
+import com.xinhuo.demo.common.utils.MyBeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -72,7 +72,7 @@ public class ${entity}Controller {
         ${entity} pre${entity} = ${entity?uncap_first}Service.getById(${tbKey});
         if(pre${entity} != null){
             //将${entity?uncap_first}不为空的copy到pre${entity},更新${entity?uncap_first}
-            BeanUtils.copyProperties(${entity?uncap_first},pre${entity});
+            MyBeanUtils.copyProperties(${entity?uncap_first},pre${entity});
             boolean result = ${entity?uncap_first}Service.updateById(pre${entity});
             if(result){
                 responseMsg.setMessage("保存成功");
@@ -91,7 +91,11 @@ public class ${entity}Controller {
     @RequestMapping(value="/{${tbKey}}", method=RequestMethod.DELETE)
     public ResponseMsg delete(@PathVariable ${tbKeyType} ${tbKey}){
         ResponseMsg responseObject = null;
+<#if tbKeyType=="Integer">
+        if(${tbKey} > 0){
+<#else>
         if(StringUtils.isNotBlank(${tbKey})){
+</#if>
             boolean result = ${entity?uncap_first}Service.removeById(${tbKey});
             if(result){
                 responseObject = new ResponseMsg(0,"删除成功");
