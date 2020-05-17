@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.commons.lang3.StringUtils;
-import com.xinhuo.demo.common.utils.MyBeanUtils;
+//import com.xinhuo.demo.common.utils.MyBeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -66,14 +66,14 @@ public class ${entity}Controller {
 
     @RequestMapping(value="/{${tbKey}}",method = RequestMethod.PUT)
     @ResponseBody
-    public ResponseMsg update(@PathVariable ${tbKeyType} ${tbKey},@RequestBody ${entity} ${entity?uncap_first})throws Exception{
+    public ResponseMsg update(@RequestBody ${entity} ${entity?uncap_first})throws Exception{
         ResponseMsg responseMsg = null;
 
-        ${entity} pre${entity} = ${entity?uncap_first}Service.getById(${tbKey});
+        ${entity} pre${entity} = ${entity?uncap_first}Service.getById(${entity?uncap_first}.get${tbKey?cap_first}());
         if(pre${entity} != null){
             //将${entity?uncap_first}不为空的copy到pre${entity},更新${entity?uncap_first}
-            MyBeanUtils.copyProperties(${entity?uncap_first},pre${entity});
-            boolean result = ${entity?uncap_first}Service.updateById(pre${entity});
+            //MyBeanUtils.copyProperties(${entity?uncap_first},pre${entity});
+            boolean result = ${entity?uncap_first}Service.updateById(${entity?uncap_first});
             if(result){
                 responseMsg.setMessage("保存成功");
             }else{
