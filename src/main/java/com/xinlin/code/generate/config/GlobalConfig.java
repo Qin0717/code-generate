@@ -11,12 +11,14 @@ public class GlobalConfig {
     private String outputDir;//文件输出路径，不配置的话默认输出当前项目的resources/code目录下
     private String entityPackage = "entity";//实体包
     private String mapperPackage = "mapper";//dao层包名
+    private String mapperXmlPath = "";//dao层xml路径
     private String serviceImplPackage = "service.Impl";//serviceImpl层包名
     private String servicePackage = "service";//service层包名
     private String controllerPackage = "controller";//控制层包名
     private String[] tableNames;//表名
     private String[] prefix;//表前缀
     private String author="";//作者
+    private String projectName="";//项目名称
 
     public String getSystem_encoding() {
         return system_encoding;
@@ -105,5 +107,21 @@ public class GlobalConfig {
 
     public void setControllerPackage(String controllerPackage) {
         this.controllerPackage = controllerPackage;
+    }
+
+    public String getMapperXmlPath() {
+        return mapperXmlPath;
+    }
+
+    public void setMapperXmlPath(String mapperXmlPath) {
+        this.mapperXmlPath = mapperXmlPath;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 }

@@ -56,7 +56,8 @@ public class CodeGenerate implements ICallBack{
         String entity = CommonUtils.getNoUnderlineStr(CommonUtils.removePrefix(tableInfo.getName().toLowerCase(),globalConfig.getPrefix()));
         data.put("entity", StringUtils.capitalize(entity));//实体名称
         data.put("author", globalConfig.getAuthor());//创建作者
-        data.put("date",  CommonUtils.getFormatTime("yyyy-MM-dd", new Date() ));//创建时间
+        data.put("projectName", globalConfig.getProjectName());//项目名称
+        data.put("date",  CommonUtils.getFormatTime("yyyy-MM-dd HH:mm:ss", new Date() ));//创建时间
         data.put("table", tableInfo);//表信息
         boolean isKeyflag = false;
         for (TableField field:tableInfo.getFields()) {
@@ -89,12 +90,13 @@ public class CodeGenerate implements ICallBack{
                 codeFactory.setCallBack(this);
                 codeFactory.setGlobalConfig(globalConfig);
                 codeFactory.invoke("entityTemplate.ftl", "entity");
-
                 codeFactory.invoke("controllerTemplate.ftl", "controller");
                 codeFactory.invoke("serviceTemplate.ftl", "service");
                 codeFactory.invoke("serviceImplTemplate.ftl", "serviceImpl");
                 codeFactory.invoke("mapperTemplate.ftl", "mapper");
-
+                if (StringUtils.isNotBlank(globalConfig.getMapperXmlPath())){
+                    codeFactory.invoke("mapperXmlTemplate.ftl", "mapperXml");
+                }
                 logger.info("-------Code----Generation-----[单表模型：" + tableInfo.getName() + "]------ 生成完成。。。");
             }catch (Exception e){
                 e.printStackTrace();

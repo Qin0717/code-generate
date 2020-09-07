@@ -91,35 +91,35 @@ public class CodeFactory
       }else{
         path.append(this.globalConfig.getOutputDir());//项目名
       }
-      path.append("/");
       if("entity".equals(codeType)){
         //包名 package.path
-        path.append(globalConfig.getEntityPackage());
-        path.append("/");
+        path.append("/java/").append(globalConfig.getEntityPackage()).append("/");
         //文件名
         path.append(entityName).append(".java");
       }else if("mapper".equals(codeType)){
         //包名 package.path
-        path.append(globalConfig.getMapperPackage());
-        path.append("/");
+        path.append("/java/").append(globalConfig.getMapperPackage()).append("/");
         //文件名
         path.append(entityName).append("Mapper").append(".java");
+      }else if("mapperXml".equals(codeType)){
+        //包名 package.path
+        path.append("/resources/").append(globalConfig.getMapperXmlPath());
+        path.append("/");
+        //文件名
+        path.append(entityName).append("Mapper").append(".xml");
       }else if("service".equals(codeType)){
         //包名 package.path
-        path.append(globalConfig.getServicePackage());
-        path.append("/");
+        path.append("/java/").append(globalConfig.getServicePackage()).append("/");
         //文件名
         path.append(entityName).append("Service").append(".java");
       }else if("serviceImpl".equals(codeType)){
         //包名 package.path
-        path.append(globalConfig.getServiceImplPackage());
-        path.append("/");
+        path.append("/java/").append(globalConfig.getServiceImplPackage()).append("/");
         //文件名
         path.append(entityName).append("ServiceImpl").append(".java");
       }else if("controller".equals(codeType)){
         //包名 package.path
-        path.append(globalConfig.getControllerPackage());
-        path.append("/");
+        path.append("/java/").append(globalConfig.getControllerPackage()).append("/");
         //文件名
         path.append(entityName).append("Controller").append(".java");
       }else{
@@ -157,7 +157,7 @@ public class CodeFactory
 
   public enum CodeType
   {
-     controller,service,serviceImpl,mapper,entity;
+     controller,service,serviceImpl,mapper,mapperXml,entity;
 
     private String type;
 
