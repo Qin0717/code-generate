@@ -1,10 +1,6 @@
 package com.xinlin.code.generate.config;
 
-/**
- * author 张新林
- * 时间 2019/6/11 23:31
- * 描述
- */
+
 public class GlobalConfig {
     private String system_encoding = "utf-8";//文件编码
     private String templatepath = "/template";//模板
@@ -17,9 +13,25 @@ public class GlobalConfig {
     private String controllerPackage = "controller";//控制层包名
     private String[] tableNames;//表名
     private String[] prefix;//表前缀
-    private String author="";//作者
-    private String projectName="";//项目名称
+    private String author = "";//作者
+    private String projectName = "";//项目名称
+    private String cdcFileName;
+    private String oracleTableName = "TABLE_NAME";
+    //表注释
+    private String oracleTableCommon;
 
+    public String getCdcFileName() {
+        return "CdcTableHandler_" + oracleTableName;
+    }
+    public void setCdcFileName(String cdcFileName) {
+        this.cdcFileName = cdcFileName;
+    }
+    public String getOracleTableName() {
+        return oracleTableName;
+    }
+    public void setOracleTableName(String oracleTableName) {
+        this.oracleTableName = oracleTableName;
+    }
     public String getSystem_encoding() {
         return system_encoding;
     }
@@ -123,5 +135,13 @@ public class GlobalConfig {
 
     public void setProjectName(String projectName) {
         this.projectName = projectName;
+    }
+
+    public String getOracleTableCommon() {
+        return oracleTableCommon;
+    }
+
+    public void setOracleTableCommon(String oracleTableCommon) {
+        this.oracleTableCommon = oracleTableCommon;
     }
 }

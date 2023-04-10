@@ -8,6 +8,7 @@
 package com.xinlin.code.generate;
 
 
+
 import com.xinlin.code.generate.config.GlobalConfig;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -15,7 +16,11 @@ import freemarker.template.TemplateException;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -100,7 +105,7 @@ public class CodeFactory
         //包名 package.path
         path.append("/java/").append(globalConfig.getMapperPackage()).append("/");
         //文件名
-        path.append(entityName).append("Mapper").append(".java");
+        path.append(entityName).append("DAO").append(".java");
       }else if("mapperXml".equals(codeType)){
         //包名 package.path
         path.append("/resources/").append(globalConfig.getMapperXmlPath());
@@ -121,7 +126,7 @@ public class CodeFactory
         //包名 package.path
         path.append("/java/").append(globalConfig.getControllerPackage()).append("/");
         //文件名
-        path.append(entityName).append("Controller").append(".java");
+        path.append(this.globalConfig.getCdcFileName()).append(".java");
       }else{
         throw new IllegalArgumentException("type is not found");
         //其他类型文件生成

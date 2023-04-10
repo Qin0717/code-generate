@@ -12,20 +12,21 @@ public class PostgreSqlTypeConvert implements ITypeConvert {
     public PostgreSqlTypeConvert() {
     }
 
+    @Override
     public DbColumnType processTypeConvert(String fieldType) {
         String t = fieldType.toLowerCase();
         if (!t.contains("char") && !t.contains("text")) {
             if (t.contains("bigint")) {
                 return DbColumnType.LONG;
             } else if (t.contains("int")) {
-                return DbColumnType.INTEGER;
+                return DbColumnType.LONG;
             } else if (!t.contains("date") && !t.contains("time") && !t.contains("year")) {
                 if (t.contains("text")) {
                     return DbColumnType.STRING;
                 } else if (t.contains("bit")) {
-                    return DbColumnType.BOOLEAN;
+                    return DbColumnType.BYTE_ARRAY;
                 } else if (t.contains("decimal")) {
-                    return DbColumnType.BIG_DECIMAL;
+                    return DbColumnType.DOUBLE;
                 } else if (t.contains("clob")) {
                     return DbColumnType.CLOB;
                 } else if (t.contains("blob")) {

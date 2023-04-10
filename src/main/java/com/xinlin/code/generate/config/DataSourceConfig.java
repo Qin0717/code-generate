@@ -176,13 +176,13 @@ public class DataSourceConfig {
         ResultSet rs = null;
         try {
             stm = conn.createStatement();
-            ResultSet rsKey = conn.getMetaData().getPrimaryKeys(null,null,tableName.toUpperCase());
+            ResultSet rsKey = conn.getMetaData().getPrimaryKeys(null,null,tableName);
             String keyName=null;
             while(rsKey.next()){
                 keyName = rsKey.getString("COLUMN_NAME").toLowerCase();
                 keyName = CommonUtils.getNoUnderlineStr(keyName);
             }
-            rs = conn.getMetaData().getColumns(   null, getSchema(conn),tableName.toUpperCase(), "%");
+            rs = conn.getMetaData().getColumns(   null, getSchema(conn),tableName, "%");
             while(rs.next()){
                 TableField tbfrField = new TableField();
                 String fieldNm = rs.getString("COLUMN_NAME").toLowerCase();
