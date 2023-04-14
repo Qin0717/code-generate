@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="352610e6-d269-4aa7-a818-e9d5d9d4a169" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinlin/code/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinlin/code/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/CodeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/CodeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/CodeGenerate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/CodeGenerate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/config/DataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/config/GlobalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/config/GlobalConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/config/converts/PostgreSqlTypeConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xinlin/code/generate/config/converts/PostgreSqlTypeConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/controllerTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/controllerTemplate.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/template/entityTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/entityTemplate.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/mapperTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/mapperTemplate.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/serviceImplTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/serviceImplTemplate.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/serviceTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/serviceTemplate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xinlin/code/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xinlin/code/Demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xinlin/code/generate/CodeGenerate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xinlin/code/generate/CodeGenerate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/template/entityTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/template/entityTemplate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/template/mapperTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/template/mapperTemplate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/template/serviceImplTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/template/serviceImplTemplate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/template/serviceTemplate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/template/serviceTemplate.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,8 @@
       <workItem from="1680250395667" duration="4679000" />
       <workItem from="1680509130868" duration="1643000" />
       <workItem from="1680566560654" duration="12000" />
-      <workItem from="1681095835448" duration="396000" />
+      <workItem from="1681095835448" duration="2597000" />
+      <workItem from="1681442235528" duration="7107000" />
     </task>
     <servers />
   </component>

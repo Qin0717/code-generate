@@ -30,10 +30,12 @@ public class ${entity} implements DataObject {
 <#assign getprefix="get"/>
 </#if>
     public ${field.propertyType} ${getprefix}${field.capitalName}() {
-	return ${field.propertyName};
+        return ${field.propertyName};
     }
+
     public void set${field.propertyName?cap_first}(${field.propertyType} ${field.propertyName}) {
         this.${field.propertyName} = ${field.propertyName};
     }
+
 </#list>
 }

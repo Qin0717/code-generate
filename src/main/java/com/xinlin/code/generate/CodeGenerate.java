@@ -98,10 +98,11 @@ public class CodeGenerate implements ICallBack {
 //                    codeFactory.invoke("mapperXmlTemplate.ftl", "mapperXml");
 //                }
                 logger.info("-------Code----Generation-----[单表模型：" + tableInfo.getName() + "]------ 生成完成。。。");
-                String[] tableNames = globalConfig.getTableNames();
-                for (String tableName : tableNames){
-                    System.out.println(tableName.replace("ods","").replace("_", "")+".ods");
-                }
+
+                //包名
+                String tableName = globalConfig.getTableNames()[0];
+                System.out.println(tableName.replace("ods", "").replace("_", "") + ".ods");
+
             } catch (Exception e) {
                 e.printStackTrace();
                 logger.info("-------Code----Generation-----[单表模型：" + tableInfo.getName() + "]------ 生成失败。。。");
