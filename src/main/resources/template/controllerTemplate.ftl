@@ -1,9 +1,9 @@
 package com.shinow.project.ciipserver.mq.consumer.cdc.qingdao.shinow;
 
 import com.shinow.ciip.starter.utils.DateHelper;
-import com.shinow.project.ciipserver.mq.consumer.cdc.AbstractCdcTableHandler;
-import com.shinow.project.warehouse.${entity?replace('ODS','')?lower_case}.ods.${entity};
-import com.shinow.project.warehouse.${entity?replace('ODS','')?lower_case}.ods.${entity}Service;
+import com.shinow.ciip.ciipserver.mq.consumer.cdc.AbstractCdcTableHandler;
+import com.shinow.ciip.warehouse.${entity?replace('ODS','')?lower_case}.ods.${entity};
+import com.shinow.ciip.warehouse.${entity?replace('ODS','')?lower_case}.ods.${entity}Service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
