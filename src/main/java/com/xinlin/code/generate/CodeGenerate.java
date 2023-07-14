@@ -122,4 +122,36 @@ public class CodeGenerate implements ICallBack {
         }
         tableInfoList = dataSourceConfig.getTablesInfo(globalConfig.getTableNames());
     }
+
+    public boolean generateToFiles(){
+        initConfig();
+        for (TableInfo tableInfo : tableInfoList) {
+            //当前需要生成的表
+            this.tableInfo = tableInfo;
+            logger.info("------Code----Generation----[单表模型:" + tableInfo.getName() + "]------- 生成中。。。");
+            try {
+
+                CodeFactory codeFactory = new CodeFactory();
+                codeFactory.setCallBack(this);
+                codeFactory.setGlobalConfig(globalConfig);
+                codeFactory.invoke("entityTemplate.ftl", "entity");
+                codeFactory.invoke("controllerTemplate.ftl", "controller");
+                codeFactory.invoke("serviceTemplate.ftl", "service");
+                codeFactory.invoke("serviceImplTemplate.ftl", "serviceImpl");
+                codeFactory.invoke("mapperTemplate.ftl", "mapper");
+                logger.info("-------Code----Generation-----[单表模型：" + tableInfo.getName() + "]------ 生成完成。。。");
+
+                //包名
+                String tableName = globalConfig.getTableNames()[0];
+                System.out.println(tableName.replace("ods", "").replace("_", "") + ".ods");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                logger.info("-------Code----Generation-----[单表模型：" + tableInfo.getName() + "]------ 生成失败。。。");
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
