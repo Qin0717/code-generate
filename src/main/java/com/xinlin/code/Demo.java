@@ -24,10 +24,10 @@ public class Demo {
         globalConfig.setControllerPackage("cn.com.bluemoon.car.model");
         //需要生成的实体
 
-        globalConfig.setOracleTableName("T_DNM_DISCARD_REASON");
-        globalConfig.setOracleTableCommon("献血淘汰信息");
+        globalConfig.setOracleTableName("T_DNS_REFER");
+        globalConfig.setOracleTableCommon("服务咨询主记录");
         //需要生成的实体
-        globalConfig.setTableNames(new String[]{"ods_donation_elimination_info"});
+        globalConfig.setTableNames(new String[]{"sz_ods_service_consult_record"});
 
         //数据库配置
         DataSourceConfig dsc = new DataSourceConfig();
@@ -35,7 +35,7 @@ public class Demo {
         dsc.setUrl("jdbc:postgresql://10.1.6.222:5432/ciip?stringtype=unspecified");
         //填写自己的数据库账号
         dsc.setUsername("postgres");
-//        //填写自己的数据库密码
+        //填写自己的数据库密码
         dsc.setPassword("123456");
         CodeGenerate codeGenerate = new CodeGenerate(globalConfig, dsc);
         //生成代码

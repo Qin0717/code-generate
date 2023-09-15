@@ -52,7 +52,7 @@ public class CodeGenerate implements ICallBack {
 
         //移除表前缀，表名之间的下划线，得到实体类型
         String entity = CommonUtils.getNoUnderlineStr(CommonUtils.removePrefix(tableInfo.getName().toLowerCase(), globalConfig.getPrefix()));
-        String s = entity.substring(0, 3).toUpperCase() + entity.substring(3);
+        String s = entity.substring(0, 5).toUpperCase() + entity.substring(5);
         data.put("entity", StringUtils.capitalize(s));//实体名称
         data.put("author", globalConfig.getAuthor());//创建作者
 //        data.put("projectName", globalConfig.getProjectName());//项目名称
@@ -101,7 +101,7 @@ public class CodeGenerate implements ICallBack {
 
                 //包名
                 String tableName = globalConfig.getTableNames()[0];
-                System.out.println(tableName.replace("ods", "").replace("_", "") + ".ods");
+                System.out.println(tableName.replace("sz_ods", "").replace("_", "") + ".ods");
 
             } catch (Exception e) {
                 e.printStackTrace();

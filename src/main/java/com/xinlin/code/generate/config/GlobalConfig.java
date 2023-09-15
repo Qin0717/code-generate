@@ -21,7 +21,7 @@ public class GlobalConfig {
     private String oracleTableCommon;
 
     public String getCdcFileName() {
-        return "CdcTableHandler_" + oracleTableName;
+        return "SZCdcTableHandler_" + oracleTableName;
     }
     public void setCdcFileName(String cdcFileName) {
         this.cdcFileName = cdcFileName;
