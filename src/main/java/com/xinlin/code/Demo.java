@@ -10,7 +10,7 @@ public class Demo {
         //全局配置
         GlobalConfig globalConfig = new GlobalConfig();
         //自定义模板路径
-        globalConfig.setTemplatepath("/template/ciip");
+        globalConfig.setTemplatepath("/template/dic");
         globalConfig.setAuthor("qinzihan");
         //实体包名
         globalConfig.setEntityPackage("cn.com.bluemoon.car.model");
@@ -24,10 +24,10 @@ public class Demo {
         globalConfig.setControllerPackage("cn.com.bluemoon.car.model");
         //需要生成的实体
 
-        globalConfig.setOracleTableName("T_DNS_REFER");
-        globalConfig.setOracleTableCommon("服务咨询主记录");
+        globalConfig.setOracleTableName("T_EMT_REGISTER");
+        globalConfig.setOracleTableCommon("记录设备详细信息");
         //需要生成的实体
-        globalConfig.setTableNames(new String[]{"sz_ods_service_consult_record"});
+        globalConfig.setTableNames(new String[]{"sz_ciip_wh_dic_equipment_detail"});
 
         //数据库配置
         DataSourceConfig dsc = new DataSourceConfig();
@@ -40,7 +40,7 @@ public class Demo {
         CodeGenerate codeGenerate = new CodeGenerate(globalConfig, dsc);
         //生成代码
         //ciip中cdc使用模板
-        codeGenerate.generateToFile();
-        //bdrs模板
+//        codeGenerate.generateToFile();
+        codeGenerate.generateToFileDic();
     }
 }

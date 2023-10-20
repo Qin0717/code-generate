@@ -12,4 +12,6 @@ import java.util.Map;
 public abstract interface ICallBack
 {
   public abstract Map<String, Object> execute();
+
+  public abstract Map<String, Object> executeDic();
 }

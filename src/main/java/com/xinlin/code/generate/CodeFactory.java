@@ -140,6 +140,12 @@ public class CodeFactory {
         generateFile(templateFileName, type, data);
     }
 
+    public void invokeDic(String templateFileName, String type) throws Exception {
+        Map data = new HashMap();
+        data = this.callBack.executeDic();
+        generateFile(templateFileName, type, data);
+    }
+
     public ICallBack getCallBack() {
         return this.callBack;
     }
