@@ -45,7 +45,7 @@ public class ${cdcFileName} extends AbstractCdcTableHandler {
             <#if field.propertyName?contains("ciip")>
             <#elseif field.propertyType == "Long">
                 if (Objects.toString(afterObj.get("${field.propertyName}"), null) != null) {
-                    ${entity?replace('SZODS','szods')}.set${field.propertyName?cap_first}(Long.valueOf(Objects.toString(afterObj.get("${field.propertyName}"), null)));
+                    ${entity?replace('SZODS','szods')}.set${field.propertyName?cap_first}(Long.parseLong(Objects.toString(afterObj.get("${field.propertyName}"), null)));
                 }
             <#elseif field.propertyType == "Date">
                 if (Objects.toString(afterObj.get("${field.propertyName}"), null) != null) {
